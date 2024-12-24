@@ -1,128 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Tekklyn | Technology & Consulting</title>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" />
-    <!-- Google Fonts Roboto -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
-    <!-- MDB -->
-    <link rel="stylesheet" href="css/mdb.min.css" />
-</head>
-<body>
-  <!--Main Navigation-->
-  <header>
-    <!-- Intro settings -->
-    <style>
-      /* Default height for small devices */
-      #intro {
-        height: 600px;
-        /* Margin to fix overlapping fixed navbar */
-        margin-top: 58px;
-      }
-      @media (max-width: 991px) {
-              #intro {
-              /* Margin to fix overlapping fixed navbar */
-              margin-top: 45px;
-      	}
-      }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tekklyn - Coming Soon</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-      <div class="container-fluid">
-        <!-- Navbar brand -->
-        <a class="navbar-brand" target="_blank" href="">
-          <img src="img/logo1.png" height="55" alt="" loading="lazy"
-            style="margin-top: -3px;" />
-        </a>
-        <button class="navbar-toggler" type="button" data-mdb-collapse-init data-mdb-target="#navbarExample01"
-          aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fas fa-bars"></i>
-        </button>
-    
-      </div>
-    </nav>
-    <!-- Navbar -->
+    body {
+      font-family: "Arial", sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(to bottom right, #1d3557, #457b9d);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
 
-    <!-- Background image -->
-    <div id="intro" class="p-5 text-center bg-image shadow-1-strong"
-      style="background-image: url('https://mdbootstrap.com/img/new/slides/205.jpg');">
-      <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);">
-        <div class="d-flex justify-content-center align-items-center h-100">
-          <div class="text-white px-4" data-mdb-theme="dark">
-            <h1 class="mb-3">Coming Soon!</h1>
+    /* Container */
+    .coming-soon-container {
+      max-width: 600px;
+      width: 90%;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    }
 
-            <!-- Time Counter -->
-            <h3 id="time-counter" class="border border-light my-4 p-4"></h3>
+    /* Header */
+    .company-name {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #f4a261;
+      margin-bottom: 0.5rem;
+    }
 
-            <p>We're working hard to finish the development of this site.</p>
+    .tagline {
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: #a8dadc;
+      margin-bottom: 1.5rem;
+    }
 
-            
-          </div>
+    /* Main Content */
+    .headline {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #f1faee;
+    }
+
+    .subheadline {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      color: #e9ecef;
+    }
+
+    /* Subscription Form */
+    .subscription-form {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+
+    .email-input {
+      padding: 0.8rem;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      width: 70%;
+    }
+
+    .subscribe-button {
+      padding: 0.8rem 1rem;
+      background: #f4a261;
+      color: #1d3557;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .subscribe-button:hover {
+      background: #e76f51;
+    }
+
+    /* Footer */
+    .footer-text {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #a8dadc;
+      opacity: 0.8;
+    }
+
+    .link{
+      color: #f4a261;
+      text-decoration: none;
+    }
+    .link:hover{
+      text-decoration: underline;
+    }
+  </style>
+  <body>
+    <div class="coming-soon-container">
+      <header>
+        <img
+        src="/assets/images/main/logo.png"
+        alt="Logo"
+        class="logo"
+        style="width: 30%"
+        />
+        <p class="tagline">Innovating the Future</p>
+      </header>
+      <main>
+        <h2 class="headline">Something Amazing is Coming Soon</h2>
+        <p class="subheadline">
+          We're working hard to bring you the best experience possible. Stay
+          tuned!
+        </p>
+        <div class="subscription-form">
+          <input
+            type="email"
+            placeholder="Enter your email address"
+            required
+            class="email-input"
+            id="emailNews"
+          />
+          <button type="submit" id="subscription-form-submit" class="subscribe-button" onclick="subscribe()">Notify Me</button>
         </div>
-      </div>
+      </main>
+      <footer>
+        <p class="footer-text">© <span id="year"></span> <a class="link" href="https://tekklyn.com">Tekklyn</a>. All Rights Reserved.</p>
+        <script>
+          const yearElement = document.getElementById("year");
+          const currentYear = new Date().getFullYear();
+          yearElement.textContent = currentYear;
+        </script>
+      </footer>
     </div>
-    <!-- Background image -->
-  </header>
-  <!--Main Navigation-->
+  </body>
 
-  <!--Main layout-->
-
-  <!--Main layout-->
-
-  <!--Footer-->
-  <footer class="bg-light text-lg-start">
-
-
-    <hr class="m-0" />
-
-    
-
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2024-2025 All copyrights reserved:
-      <a class="text-dark" href="">tekklyn.com</a>
-    </div>
-    <!-- Copyright -->
-  </footer>
-  <!--Footer-->
-
-    <!-- Time Counter -->
-    <script type="text/javascript">
-      // Set the date we're counting down to
-      var countDownDate = new Date();
-      countDownDate.setDate(countDownDate.getDate() + 30);
-
-      // Update the count down every 1 second
-      var x = setInterval(function () {
-        // Get todays date and time
-        var now = new Date().getTime();
-
-        // Find the distance between now an the count down date
-        var distance = countDownDate - now;
-
-        // Time calculations for days, hours, minutes and seconds
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        // Display the result in the element with id="demo"
-        document.getElementById('time-counter').innerHTML =
-          days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's ';
-
-        // If the count down is finished, write some text
-        if (distance < 0) {
-          clearInterval(x);
-          document.getElementById('time-counter').innerHTML = 'EXPIRED';
-        }
-      }, 1000);
-    </script>
-    <!-- MDB -->
-    <script type="text/javascript" src="js/mdb.umd.min.js"></script>
-</body>
+  <script src="/assets/js/mail.js"></script>
 </html>
