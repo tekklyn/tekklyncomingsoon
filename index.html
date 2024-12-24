@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tekklyn - Coming Soon</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Arial", sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(to bottom right, #1d3557, #457b9d);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    /* Container */
+    .coming-soon-container {
+      max-width: 600px;
+      width: 90%;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Header */
+    .company-name {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #f4a261;
+      margin-bottom: 0.5rem;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: #a8dadc;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Main Content */
+    .headline {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #f1faee;
+    }
+
+    .subheadline {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      color: #e9ecef;
+    }
+
+    /* Subscription Form */
+    .subscription-form {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+
+    .email-input {
+      padding: 0.8rem;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      width: 70%;
+    }
+
+    .subscribe-button {
+      padding: 0.8rem 1rem;
+      background: #f4a261;
+      color: #1d3557;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .subscribe-button:hover {
+      background: #e76f51;
+    }
+
+    /* Footer */
+    .footer-text {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #a8dadc;
+      opacity: 0.8;
+    }
+
+    .link{
+      color: #f4a261;
+      text-decoration: none;
+    }
+    .link:hover{
+      text-decoration: underline;
+    }
+  </style>
+  <body>
+    <div class="coming-soon-container">
+      <header>
+        <img
+        src="/assets/images/main/logo.png"
+        alt="Logo"
+        class="logo"
+        style="width: 30%"
+        />
+        <p class="tagline">Innovating the Future</p>
+      </header>
+      <main>
+        <h2 class="headline">Something Amazing is Coming Soon</h2>
+        <p class="subheadline">
+          We're working hard to bring you the best experience possible. Stay
+          tuned!
+        </p>
+        <div class="subscription-form">
+          <input
+            type="email"
+            placeholder="Enter your email address"
+            required
+            class="email-input"
+            id="emailNews"
+          />
+          <button type="submit" id="subscription-form-submit" class="subscribe-button" onclick="subscribe()">Notify Me</button>
+        </div>
+      </main>
+      <footer>
+        <p class="footer-text">© <span id="year"></span> <a class="link" href="https://tekklyn.com">Tekklyn</a>. All Rights Reserved.</p>
+        <script>
+          const yearElement = document.getElementById("year");
+          const currentYear = new Date().getFullYear();
+          yearElement.textContent = currentYear;
+        </script>
+      </footer>
+    </div>
+  </body>
+
+  <script src="/assets/js/mail.js"></script>
+</html>
